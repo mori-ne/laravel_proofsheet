@@ -21,7 +21,7 @@
 
         {{-- sidebar --}}
         <div id="application-sidebar"
-            class="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform w-[260px] hidden inset-y-0 start-0 z-[60] bg-white border-e border-gray-200 lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 flex-shrink-0 flex-grow-0">
+            class="hs-overlay [--auto-close:lg] hs-overlay-open:translate-x-0 -translate-x-full transition-all duration-300 transform w-[260px] hidden inset-y-0 start-0 z-[60] bg-white border-e border-gray-200 lg:block lg:translate-x-0 lg:end-auto lg:bottom-0 flex-shrink-0 flex-grow-0 shadow">
 
             <div class="px-8 pt-4">
                 <!-- Logo -->

@@ -15,7 +15,7 @@
                 < 一覧へ戻る</a>
 
                     <div class=" overflow-hidden shadow-sm sm:rounded-lg">
-                        <div class="p-7 text-gray-900 mb-6 bg-white rounded border">
+                        <div class="p-7 text-gray-900 mb-6 bg-white rounded border shadow">
                             <div class="max-w-[85rem] px-4 mx-auto">
                                 <div class="flex flex-col gap-4">
 
@@ -29,7 +29,7 @@
                                                 <!-- Section -->
 
                                                 <div
-                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200">
+                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <div class="sm:col-span-12">
                                                         <h2 class="text-lg font-semibold text-gray-800">
                                                             プロジェクト名 </h2>
@@ -38,15 +38,15 @@
                                                     <div class="sm:col-span-12">
                                                         <div class="sm:flex">
                                                             <input id="af-submit-application-full-name" type="text"
-                                                                class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                                                                placeholder="第◯回 ◯◯◯◯◯◯◯◯◯◯大会">
+                                                                class="py-2 px-3 pe-11 block w-full border-gray-300 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                                                                placeholder="This is a input placeholder">
                                                         </div>
                                                     </div>
                                                     <!-- End Col -->
                                                 </div>
 
                                                 <div
-                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200">
+                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <div class="sm:col-span-12">
                                                         <h2 class="text-lg font-semibold text-gray-800">
                                                             説明 </h2>
@@ -56,7 +56,7 @@
                                                         <div class="sm:flex">
                                                             <div class="max-w-full space-y-3">
                                                                 <textarea
-                                                                    class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                                                                    class="py-3 px-4 block w-full border-gray-300 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                                                     rows="12" cols="100" placeholder="This is a textarea placeholder"></textarea>
                                                             </div>
                                                         </div>
@@ -65,7 +65,7 @@
                                                 </div>
 
                                                 <div
-                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200">
+                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <div class="sm:col-span-12">
                                                         <h2 class="text-lg font-semibold text-gray-800">
                                                             開始・終了日 </h2>
@@ -108,7 +108,7 @@
                   "viewport": "#single-pre-set-ranges-tab-preview-datepicker",
                   "toggleTag": "<button type=\"button\"></button>",
                   "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative flex text-nowrap w-full cursor-pointer text-start font-medium text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600 before:absolute before:inset-0 before:z-[1]",
-                  "dropdownClasses": "mt-2 z-50 w-32 max-h-72 p-1 space-y-0.5 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
+                  "dropdownClasses": "mt-2 z-50 w-32 max-h-72 p-1 space-y-0.5 bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
                   "optionClasses": "p-2 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100",
                   "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"flex-shrink-0 size-3.5 text-gray-800\" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
                 }'
@@ -138,7 +138,7 @@
                   "viewport": "#single-pre-set-ranges-tab-preview-datepicker",
                   "toggleTag": "<button type=\"button\"></button>",
                   "toggleClasses": "hs-select-disabled:pointer-events-none hs-select-disabled:opacity-50 relative flex text-nowrap w-full cursor-pointer text-start font-medium text-gray-800 hover:text-gray-600 focus:outline-none focus:text-gray-600 before:absolute before:inset-0 before:z-[1]",
-                  "dropdownClasses": "mt-2 z-50 w-20 max-h-72 p-1 space-y-0.5 bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
+                  "dropdownClasses": "mt-2 z-50 w-20 max-h-72 p-1 space-y-0.5 bg-white border border-gray-300 rounded-lg shadow-lg overflow-hidden overflow-y-auto [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300",
                   "optionClasses": "p-2 w-full text-sm text-gray-800 cursor-pointer hover:bg-gray-100 rounded-lg focus:outline-none focus:bg-gray-100",
                   "optionTemplate": "<div class=\"flex justify-between items-center w-full\"><span data-title></span><span class=\"hidden hs-selected:block\"><svg class=\"flex-shrink-0 size-3.5 text-gray-800\" xmlns=\"http:.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><polyline points=\"20 6 9 17 4 12\"/></svg></span></div>"
                 }'
@@ -516,7 +516,7 @@
                                                     <!-- Footer -->
                                                     <div class="flex justify-end items-center gap-x-2 p-3 border-t">
                                                         <button type="button"
-                                                            class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
+                                                            class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-300 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
                                                             Cancel
                                                         </button>
                                                         <button type="button"
@@ -531,7 +531,7 @@
 
                                                 <!-- Section -->
                                                 <div
-                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200">
+                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <div class="sm:col-span-12">
                                                         <h2 class="text-lg font-semibold text-gray-800">
                                                             Profile
@@ -553,7 +553,7 @@
                                                             file</label>
                                                         <input type="file" name="af-submit-application-resume-cv"
                                                             id="af-submit-application-resume-cv"
-                                                            class="block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none file:bg-gray-50 file:border-0 file:bg-gray-100 file:me-4 file:py-2 file:px-4">
+                                                            class="block w-full border border-gray-300 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none file:border-0 file:bg-gray-100 file:me-4 file:py-2 file:px-4">
                                                     </div>
                                                     <!-- End Col -->
 
@@ -569,7 +569,7 @@
 
                                                     <div class="sm:col-span-9">
                                                         <textarea id="af-submit-application-bio"
-                                                            class="py-2 px-3 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                                                            class="py-2 px-3 block w-full border-gray-300 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                                             rows="6" placeholder="Add a cover letter or anything else you want to share."></textarea>
                                                     </div>
                                                     <!-- End Col -->
@@ -578,7 +578,7 @@
 
                                                 <!-- Section -->
                                                 <div
-                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200">
+                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <div class="sm:col-span-12">
                                                         <h2 class="text-lg font-semibold text-gray-800">
                                                             Links
@@ -596,7 +596,7 @@
 
                                                     <div class="sm:col-span-9">
                                                         <input id="af-submit-application-linkedin-url" type="text"
-                                                            class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                                            class="py-2 px-3 pe-11 block w-full border-gray-300 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                                     </div>
                                                     <!-- End Col -->
 
@@ -610,7 +610,7 @@
 
                                                     <div class="sm:col-span-9">
                                                         <input id="af-submit-application-twitter-url" type="text"
-                                                            class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                                            class="py-2 px-3 pe-11 block w-full border-gray-300 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                                     </div>
                                                     <!-- End Col -->
 
@@ -624,7 +624,7 @@
 
                                                     <div class="sm:col-span-9">
                                                         <input id="af-submit-application-github-url" type="text"
-                                                            class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                                            class="py-2 px-3 pe-11 block w-full border-gray-300 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                                     </div>
                                                     <!-- End Col -->
 
@@ -638,7 +638,7 @@
 
                                                     <div class="sm:col-span-9">
                                                         <input id="af-submit-application-portfolio-url" type="text"
-                                                            class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                                            class="py-2 px-3 pe-11 block w-full border-gray-300 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                                     </div>
                                                     <!-- End Col -->
 
@@ -652,7 +652,7 @@
 
                                                     <div class="sm:col-span-9">
                                                         <input id="af-submit-application-other-website" type="text"
-                                                            class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                                            class="py-2 px-3 pe-11 block w-full border-gray-300 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                                     </div>
                                                     <!-- End Col -->
 
@@ -676,7 +676,7 @@
 
                                                 <!-- Section -->
                                                 <div
-                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200">
+                                                    class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <div class="sm:col-span-12">
                                                         <h2 class="text-lg font-semibold text-gray-800">
                                                             Before sending your application, please let us know...
@@ -695,7 +695,7 @@
                                                     <div class="sm:col-span-9">
                                                         <input id="af-submit-application-desired-salary"
                                                             type="text"
-                                                            class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                                            class="py-2 px-3 pe-11 block w-full border-gray-300 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                                     </div>
                                                     <!-- End Col -->
 
@@ -710,7 +710,7 @@
                                                     <div class="sm:col-span-9">
                                                         <input id="af-submit-application-available-start-date"
                                                             type="text"
-                                                            class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
+                                                            class="py-2 px-3 pe-11 block w-full border-gray-300 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                                     </div>
                                                     <!-- End Col -->
                                                 </div>
@@ -718,7 +718,7 @@
 
                                                 <!-- Section -->
                                                 <div
-                                                    class="py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-200">
+                                                    class="py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <h2 class="text-lg font-semibold text-gray-800">
                                                         Submit application
                                                     </h2>

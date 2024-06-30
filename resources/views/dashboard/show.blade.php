@@ -25,7 +25,7 @@
 
             <div class=" overflow-hidden shadow-sm sm:rounded-lg">
 
-                <div class="p-7 text-gray-900 mb-6 bg-white rounded border">
+                <div class="p-7 text-gray-900 mb-6 bg-white rounded border shadow">
 
                     <div class="flex justify-between mb-4 gap-4">
                         <p

@@ -21,7 +21,7 @@
             <div class=" overflow-hidden shadow-sm sm:rounded-lg">
 
                 @foreach ($posts as $post)
-                    <div class="p-7 text-gray-900 mb-6 bg-white rounded border">
+                    <div class="p-7 text-gray-900 mb-6 bg-white rounded border shadow">
 
                         <div class="flex justify-between mb-4 gap-4">
                             <p
@@ -48,7 +48,7 @@
                                         詳細を見る
                                     </a>
                                     <a href="#"
-                                        class="py-3 px-4 inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg text-sm font-medium focus:z-10 border border-gray-200 bg-white shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
+                                        class="py-3 px-4 inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg text-sm font-medium focus:z-10 border border-gray-200 bg-white shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none text-red-500">
                                         削除
                                     </a>
                                 </div>

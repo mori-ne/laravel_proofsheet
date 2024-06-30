@@ -20,7 +20,7 @@
     <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
 
 
-        <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white border overflow-hidden sm:rounded-lg">
+        <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white border overflow-hidden sm:rounded-lg shadow">
             <div class="text-center">
                 <h1 class="block mt-6 text-3xl font-bold text-gray-800">Proofsheet</h1>
                 <p class="block mt-2 text-md text-gray-800">Sign in</p>

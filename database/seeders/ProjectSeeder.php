@@ -37,6 +37,22 @@ class ProjectSeeder extends Seeder
                 'status' => 0,
                 'published_at' => $now,
                 'unpublished_at' => $now,
+            ],
+            [
+                'unique_id' => '00000000-0000-0000-0000-000000000004',
+                'project_name' => 'サマーセミナー in OKINAWA',
+                'description' => '中頭病院 サマーセミナー演題募集用',
+                'status' => 1,
+                'published_at' => $now,
+                'unpublished_at' => $now,
+            ],
+            [
+                'unique_id' => '00000000-0000-0000-0000-000000000005',
+                'project_name' => '日本ジェネリック医薬品・バイオシミラー学会',
+                'description' => '■投稿内容のご確認について 投稿された内容のご確認はマイページのプレビューにてご確認ください。 「ログイン」→「マイページ」→「投稿フォーム一覧」→「プレビュー」 マイページログインURL https://www.proofsheet.jp/YuAIZ58stlM6zsz%2BCjnDGg%3D%3DFKS/',
+                'status' => 1,
+                'published_at' => $now,
+                'unpublished_at' => $now,
             ]
         ];
 
