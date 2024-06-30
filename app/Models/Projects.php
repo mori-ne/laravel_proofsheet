@@ -19,4 +19,10 @@ class Projects extends Model
         'published_at',
         'unpublished_at',
     ];
+
+    // リレーション
+    public function form()
+    {
+        return $this->hasMany(Forms::class, 'project_id');
+    }
 }

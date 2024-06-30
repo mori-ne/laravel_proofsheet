@@ -35,7 +35,7 @@ class ProjectsController extends Controller
      */
     public function show($id)
     {
-        $post = Projects::findOrFail($id);
+        $post = Projects::with('form')->findOrFail($id);
         return view('dashboard.show', compact('post'));
     }
 
