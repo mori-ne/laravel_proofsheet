@@ -25,30 +25,30 @@
 
                         <div class="flex justify-between mb-4 gap-4">
                             <p
-                                class="ml-4 h-fit py-1 px-4 inline-flex items-center gap-x-1 text-xs font-medium bg-gray-100 text-teal-800 rounded-full dark:bg-gray-500/10 dark:text-teal-500">
+                                class="ml-4 h-fit py-1 px-4 inline-flex items-center gap-x-1 text-xs font-medium bg-gray-100 text-teal-800 rounded-full">
                                 プロジェクトID：
                                 {{ $post->unique_id }}
                             </p>
                             <div>
                                 @if (!$post->status)
                                     <span
-                                        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-gray-100 text-gray-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-white/10 dark:hover:bg-white/20 dark:text-neutral-400">
+                                        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-gray-100 text-gray-500 disabled:opacity-50 disabled:pointer-events-none">
                                         非公開
                                     </span>
                                 @else
                                     <span
-                                        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-teal-100 text-teal-800 disabled:opacity-50 disabled:pointer-events-none dark:hover:bg-teal-900 dark:text-teal-500 dark:hover:text-teal-400">
+                                        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-teal-100 text-teal-800 disabled:opacity-50 disabled:pointer-events-none">
                                         公開中
                                     </span>
                                 @endif
 
                                 <div class="inline-flex rounded-lg shadow-sm">
                                     <a href="{{ route('dashboard.show', $post->id) }}"
-                                        class="py-3 px-4 inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg text-sm font-medium focus:z-10 border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800">
+                                        class="py-3 px-4 inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg text-sm font-medium focus:z-10 border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
                                         詳細を見る
                                     </a>
                                     <a href="#"
-                                        class="py-3 px-4 inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg text-sm font-medium focus:z-10 border border-gray-200 bg-white shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-800 text-red-500">
+                                        class="py-3 px-4 inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg text-sm font-medium focus:z-10 border border-gray-200 bg-white shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
                                         削除
                                     </a>
                                 </div>
@@ -61,15 +61,15 @@
                             <div class="flex flex-col gap-4">
                                 <div class="md:row-span-2">
                                     <div class="w-full">
-                                        <h2 class="text-2xl font-bold md:text-2xl md:leading-tight dark:text-white">
+                                        <h2 class="text-2xl font-bold md:text-2xl md:leading-tight">
                                             {{ $post->project_name }}
                                         </h2>
-                                        <p class="mt-1 mb-4 hidden md:block text-gray-600 dark:text-neutral-400">
+                                        <p class="mt-1 mb-4 hidden md:block text-gray-600">
                                             公開期間：
                                             {{ $post->published_at }}～{{ $post->unpublished_at }}
                                         </p>
                                         {{-- <p
-                                            class="text-sm mb-2 leading-6 hidden md:block text-gray-600 dark:text-neutral-400">
+                                            class="text-sm mb-2 leading-6 hidden md:block text-gray-600">
                                             {{ $post->description }}
                                         </p> --}}
                                     </div>
@@ -83,72 +83,72 @@
                                             <div class="p-1.5 w-full inline-block align-middle">
                                                 <div class="overflow-hidden">
                                                     <table
-                                                        class="w-full divide-y divide-gray-200 dark:divide-neutral-700">
+                                                        class="w-full divide-y divide-gray-200">
                                                         <thead>
                                                             <tr>
                                                                 <th scope="col"
-                                                                    class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">
+                                                                    class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
                                                                     Name</th>
                                                                 <th scope="col"
-                                                                    class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">
+                                                                    class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
                                                                     Age</th>
                                                                 <th scope="col"
-                                                                    class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">
+                                                                    class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
                                                                     Address</th>
                                                                 <th scope="col"
-                                                                    class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase dark:text-neutral-500">
+                                                                    class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">
                                                                     Action</th>
                                                             </tr>
                                                         </thead>
-                                                        <tbody class="divide-y divide-gray-200 dark:divide-neutral-700">
+                                                        <tbody class="divide-y divide-gray-200">
                                                             <tr>
                                                                 <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+                                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
                                                                     John Brown</td>
                                                                 <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
                                                                     45</td>
                                                                 <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
                                                                     New York No. 1 Lake Park</td>
                                                                 <td
                                                                     class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                                                     <button type="button"
-                                                                        class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400">Delete</button>
+                                                                        class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>
                                                                 <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+                                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
                                                                     Jim Green</td>
                                                                 <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
                                                                     27</td>
                                                                 <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
                                                                     London No. 1 Lake Park</td>
                                                                 <td
                                                                     class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                                                     <button type="button"
-                                                                        class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400">Delete</button>
+                                                                        class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
                                                                 </td>
                                                             </tr>
 
                                                             <tr>
                                                                 <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800 dark:text-neutral-200">
+                                                                    class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-800">
                                                                     Joe Black</td>
                                                                 <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
                                                                     31</td>
                                                                 <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                                                                    class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">
                                                                     Sidney No. 1 Lake Park</td>
                                                                 <td
                                                                     class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
                                                                     <button type="button"
-                                                                        class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none dark:text-blue-500 dark:hover:text-blue-400">Delete</button>
+                                                                        class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
                                                                 </td>
                                                             </tr>
                                                         </tbody>

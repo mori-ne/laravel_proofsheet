@@ -22,8 +22,8 @@
 
         <div class="w-full sm:max-w-md mt-6 px-6 py-4 bg-white border overflow-hidden sm:rounded-lg">
             <div class="text-center">
-                <h1 class="block mt-6 text-3xl font-bold text-gray-800 dark:text-white">Proofsheet</h1>
-                <p class="block mt-2 text-md text-gray-800 dark:text-white">Sign in</p>
+                <h1 class="block mt-6 text-3xl font-bold text-gray-800">Proofsheet</h1>
+                <p class="block mt-2 text-md text-gray-800">Sign in</p>
             </div>
             <div class="p-4 sm:p-7">
                 {{ $slot }}
