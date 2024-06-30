@@ -10,6 +10,7 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->primary()->autoIncrement();
+            $table->uuid('unique_id')->unique()->comment('プロジェクトID');
             $table->string('project_name', 100)->comment('プロジェクト名');
             $table->text('description')->nullable()->comment('説明');
             $table->boolean('status')->default(0)->comment('0:無効・1:有効');

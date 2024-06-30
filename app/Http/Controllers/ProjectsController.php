@@ -19,7 +19,7 @@ class ProjectsController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.create');
     }
 
     /**
@@ -33,9 +33,10 @@ class ProjectsController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Projects $projects)
+    public function show($id)
     {
-        //
+        $post = Projects::findOrFail($id);
+        return view('dashboard.show', compact('post'));
     }
 
     /**
