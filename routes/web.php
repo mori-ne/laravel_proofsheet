@@ -10,7 +10,9 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['auth', 'verified']], function () {
     Route::resource('dashboard', ProjectsController::class)->name('*', 'dashboard');
+    Route::post('dashboard/{id}/changeToggleStatus', [ProjectsController::class, 'changeToggleStatus'])->name('dashboard.changeToggleStatus');
 });
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

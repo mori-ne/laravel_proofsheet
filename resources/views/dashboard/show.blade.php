@@ -3,6 +3,20 @@
     <div>
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
+            {{-- アラート ここから --}}
+            @if (session('success'))
+                <div class="mt-2 bg-teal-500 text-sm text-white rounded-lg p-4 mb-4" role="alert">
+                    <span class="font-bold">Success</span>
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            @if (session('error'))
+                <div class="alert alert-danger">
+                    {{ session('error') }}
+                </div>
+            @endif
+            {{-- アラート ここまで --}}
 
             <x-slot name="header">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -24,26 +38,32 @@
 
 
             <div class=" overflow-hidden shadow-sm sm:rounded-lg">
-
                 <div class="p-7 text-gray-900 mb-6 bg-white rounded border shadow">
-
                     <div class="flex justify-between mb-4 gap-4">
                         <p
                             class="ml-4 h-fit py-1 px-4 inline-flex items-center gap-x-1 text-xs font-medium bg-gray-100 text-teal-800 rounded-full">
                             プロジェクトID：
                             {{ $post->unique_id }}
                         </p>
-                        <div>
+                        <div class="flex gap-4">
                             @if (!$post->status)
-                                <span
-                                    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-gray-100 text-gray-500 disabled:opacity-50 disabled:pointer-events-none">
-                                    非公開
-                                </span>
+                                <form id="toggle_status_form_{{ $post->id }}"
+                                    action="{{ route('dashboard.changeToggleStatus', $post->id) }}" method="post">
+                                    @csrf
+                                    <button type="submit"
+                                        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-gray-100 text-gray-500 disabled:opacity-50 disabled:pointer-events-none">
+                                        非公開
+                                    </button>
+                                </form>
                             @else
-                                <span
-                                    class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-teal-100 text-teal-800 disabled:opacity-50 disabled:pointer-events-none">
-                                    公開中
-                                </span>
+                                <form id="toggle_status_form_{{ $post->id }}"
+                                    action="{{ route('dashboard.changeToggleStatus', $post->id) }}" method="post">
+                                    @csrf
+                                    <button type="submit"
+                                        class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-teal-100 text-teal-800 disabled:opacity-50 disabled:pointer-events-none shadow">
+                                        公開中
+                                    </button>
+                                </form>
                             @endif
 
                             <div class="inline-flex rounded-lg shadow-sm">

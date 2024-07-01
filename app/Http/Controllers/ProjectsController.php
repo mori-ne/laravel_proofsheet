@@ -49,13 +49,26 @@ class ProjectsController extends Controller
     // 削除処理
     public function destroy($id)
     {
-        $deleteProjectId = Projects::find($id);
+        $project = Projects::find($id);
 
         // 削除するデータがなければ
-        if (!$deleteProjectId) {
+        if (!$project) {
             return redirect()->back()->with('error', '削除するプロジェクトがありませんでした');
         }
         Projects::destroy($id);
         return redirect()->back()->with('success', '削除しました');
+    }
+
+    public function changeToggleStatus($id)
+    {
+        $project = Projects::find($id);
+        if (!$project) {
+            return redirect()->back()->with('error', '変更するプロジェクトがありませんでした');
+        }
+        // statusをトグル
+        $project->status = !$project->status;
+        $project->save();
+
+        return redirect()->back()->with('success', '公開・非公開を変更しました');
     }
 }
