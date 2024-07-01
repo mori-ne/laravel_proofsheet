@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Projects;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\StoreProjectRequest;
+use Illuminate\Support\Str;
 
 class ProjectsController extends Controller
 {
@@ -22,9 +24,21 @@ class ProjectsController extends Controller
     }
 
     // 新規作成
-    public function store(Request $request)
+    public function store(StoreProjectRequest $request)
     {
-        //
+        // バリデーション済みのデータを取得
+        $validatedData = $request->validated();
+
+        // UUIDを生成して追加
+        $validatedData['unique_id'] = (string) Str::uuid();
+        $validatedData['published_at'] = $request->published_at;
+        $validatedData['unpublished_at'] = $request->unpublished_at;
+
+        // プロジェクトを作成してデータベースに保存
+        $project = Projects::create($validatedData);
+
+        // 保存成功後のリダイレクトやレスポンス
+        return redirect()->route('dashboard.index')->with('success', 'プロジェクトが正常に作成されました');
     }
 
     // 個別ページ
@@ -56,7 +70,8 @@ class ProjectsController extends Controller
             return redirect()->back()->with('error', '削除するプロジェクトがありませんでした');
         }
         Projects::destroy($id);
-        return redirect()->back()->with('success', '削除しました');
+        // return redirect()->back()->with('success', '削除しました');
+        return redirect('dashboard')->with('success', '削除しました');
     }
 
     public function changeToggleStatus($id)

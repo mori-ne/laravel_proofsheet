@@ -18,6 +18,7 @@
             @endif
             {{-- アラート ここまで --}}
 
+
             <x-slot name="header">
                 <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                     {{ __('Dashboard') }}
@@ -41,7 +42,7 @@
                 <div class="p-7 text-gray-900 mb-6 bg-white rounded border shadow">
                     <div class="flex justify-between mb-4 gap-4">
                         <p
-                            class="ml-4 h-fit py-1 px-4 inline-flex items-center gap-x-1 text-xs font-medium bg-gray-100 text-teal-800 rounded-full">
+                            class="ml-4 h-fit py-1 px-4 inline-flex items-center gap-x-1 text-sm font-medium bg-gray-100 text-teal-800 rounded-full">
                             プロジェクトID：
                             {{ $post->unique_id }}
                         </p>
@@ -78,10 +79,22 @@
                                     class="py-3 px-4 inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg text-sm font-medium focus:z-10 border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
                                     編集する
                                 </a>
-                                <a href="#"
-                                    class="py-3 px-4 inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg text-sm font-medium focus:z-10 border border-gray-200 bg-white shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none text-red-500">
-                                    削除
-                                </a>
+                                <form id="delete_form_{{ $post->id }}"
+                                    action="{{ route('dashboard.destroy', $post->id) }}" method="post">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button onclick="confirmDelete({{ $post->id }})" type="button"
+                                        class="py-3 px-4 inline-flex items-center gap-x-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg text-sm font-medium focus:z-10 border border-gray-200 bg-white shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none text-red-500">
+                                        削除
+                                    </button>
+                                </form>
+                                <script>
+                                    function confirmDelete(id) {
+                                        if (confirm('選択したプロジェクトを削除してもよろしいですか？')) {
+                                            document.getElementById('delete_form_' + id).submit();
+                                        }
+                                    }
+                                </script>
                             </div>
 
                         </div>
@@ -91,9 +104,10 @@
                     <div class="max-w-[85rem] px-4 mx-auto">
                         <!-- Grid -->
                         <div class="flex flex-col gap-4">
+
                             <div class="md:row-span-2">
                                 <div class="w-full">
-                                    <h2 class="text-2xl font-bold md:text-2xl md:leading-tight">
+                                    <h2 class="text-3xl font-bold md:text-3xl md:leading-tight">
                                         {{ $post->project_name }}
                                     </h2>
                                     <p class="mt-1 mb-4 hidden md:block text-gray-600">
@@ -107,7 +121,18 @@
                             </div>
                             <!-- End row -->
 
+
                             <div class="md:row-span-3">
+
+                                {{-- button group --}}
+                                <div class="flex justify-end gap-4">
+                                    <button type="button"
+                                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                                        新しいフォームを追加
+                                    </button>
+                                </div>
+
+
                                 <!-- Accordion -->
                                 <div class="flex flex-row">
                                     <div class="w-full overflow-x-auto">
@@ -117,7 +142,7 @@
                                                     <thead>
                                                         <tr>
                                                             <th scope="col"
-                                                                class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
+                                                                class="w-4 px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
                                                                 No.
                                                             </th>
                                                             <th scope="col"
@@ -127,8 +152,8 @@
                                                                 class="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
                                                                 説明</th>
                                                             <th scope="col"
-                                                                class="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">
-                                                                編集</th>
+                                                                class="w-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">
+                                                                操作</th>
                                                         </tr>
                                                     </thead>
                                                     <tbody class="divide-y divide-gray-200">
@@ -147,9 +172,18 @@
                                                                     {{ $form->description }}
                                                                 </td>
                                                                 <td
-                                                                    class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-                                                                    <button type="button"
-                                                                        class="inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-blue-600 hover:text-blue-800 disabled:opacity-50 disabled:pointer-events-none">Delete</button>
+                                                                    class="py-4 whitespace-nowrap text-end text-sm font-medium">
+                                                                    <div class="inline-flex rounded-lg shadow-sm">
+                                                                        <button type="button"
+                                                                            class="py-2 px-3 inline-flex justify-center items-center gap-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg text-sm font-medium focus:z-10 border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none">
+                                                                            編集
+                                                                        </button>
+
+                                                                        <button type="button"
+                                                                            class="py-2 px-3 inline-flex justify-center items-center gap-2 -ms-px first:rounded-s-lg first:ms-0 last:rounded-e-lg text-sm font-medium focus:z-10 border border-gray-200 bg-white shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none text-red-500">
+                                                                            削除
+                                                                        </button>
+                                                                    </div>
                                                                 </td>
                                                             </tr>
                                                         @endforeach
