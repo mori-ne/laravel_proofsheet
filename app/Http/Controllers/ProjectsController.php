@@ -8,58 +8,54 @@ use Illuminate\Http\Request;
 
 class ProjectsController extends Controller
 {
+    // 一覧表示
     public function index()
     {
         $posts = Projects::all();
         return view('dashboard')->with('posts', $posts);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
+    // 新規作成ページ
     public function create()
     {
         return view('dashboard.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
+    // 新規作成
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     */
+    // 個別ページ
     public function show($id)
     {
         $post = Projects::with('form')->findOrFail($id);
         return view('dashboard.show', compact('post'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
+    // 編集ページ
     public function edit(Projects $projects)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
+    // 更新処理
     public function update(Request $request, Projects $projects)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Projects $projects)
+    // 削除処理
+    public function destroy($id)
     {
-        //
+        $deleteProjectId = Projects::find($id);
+
+        // 削除するデータがなければ
+        if (!$deleteProjectId) {
+            return redirect()->back()->with('error', '削除するプロジェクトがありませんでした');
+        }
+        Projects::destroy($id);
+        return redirect()->back()->with('success', '削除しました');
     }
 }
