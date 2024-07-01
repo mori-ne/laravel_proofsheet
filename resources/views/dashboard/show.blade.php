@@ -50,7 +50,7 @@
                                 <form id="toggle_status_form_{{ $post->id }}"
                                     action="{{ route('dashboard.changeToggleStatus', $post->id) }}" method="post">
                                     @csrf
-                                    <button type="submit"
+                                    <button onclick="confirmToggle({{ $post->id }})" type="button"
                                         class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-gray-100 text-gray-500 disabled:opacity-50 disabled:pointer-events-none">
                                         非公開
                                     </button>
@@ -59,12 +59,19 @@
                                 <form id="toggle_status_form_{{ $post->id }}"
                                     action="{{ route('dashboard.changeToggleStatus', $post->id) }}" method="post">
                                     @csrf
-                                    <button type="submit"
+                                    <button onclick="confirmToggle({{ $post->id }})" type="button"
                                         class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-teal-100 text-teal-800 disabled:opacity-50 disabled:pointer-events-none shadow">
                                         公開中
                                     </button>
                                 </form>
                             @endif
+                            <script>
+                                function confirmToggle(id) {
+                                    if (confirm('選択したプロジェクトの公開・非公開を切り替えますか？')) {
+                                        document.getElementById('toggle_status_form_' + id).submit();
+                                    }
+                                }
+                            </script>
 
                             <div class="inline-flex rounded-lg shadow-sm">
                                 <a href="{{ route('dashboard.show', $post->id) }}"
