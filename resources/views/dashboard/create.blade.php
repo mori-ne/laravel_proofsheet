@@ -22,14 +22,13 @@
 
 
                                     <!-- Card Section -->
-                                    <div class="max-w-4xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+                                    <div class="max-w-14xl px-4 py-14 mx-auto">
                                         <!-- Card -->
-                                        <div class="bg-white rounded-xl p-4 sm:p-7">
+                                        <div class="">
                                             <form>
-                                                <!-- Section -->
-
                                                 <div
                                                     class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
+
                                                     <div class="sm:col-span-12">
                                                         <h2 class="text-lg font-semibold text-gray-800">
                                                             プロジェクト名 </h2>
@@ -42,7 +41,6 @@
                                                                 placeholder="This is a input placeholder">
                                                         </div>
                                                     </div>
-                                                    <!-- End Col -->
                                                 </div>
 
                                                 <div
@@ -61,19 +59,34 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- End Col -->
                                                 </div>
 
                                                 <div
+                                                    class="flex items-center gap-16 py-8 border-t first:border-transparent border-gray-300">
+                                                    <div class="flex items-center gap-4">
+                                                        <h2 class="text-lg font-semibold text-gray-800">
+                                                            公開開始日
+                                                        </h2>
+                                                        <input id="datetime_start" type="datetime-local">
+                                                    </div>
+
+                                                    <div class="flex items-center gap-4">
+                                                        <h2 class="text-lg font-semibold text-gray-800">
+                                                            公開終了日
+                                                        </h2>
+                                                        <input id="datetime_end" type="datetime-local">
+                                                    </div>
+                                                </div>
+
+                                                {{-- <div
                                                     class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <div class="sm:col-span-12">
                                                         <h2 class="text-lg font-semibold text-gray-800">
                                                             開始・終了日 </h2>
                                                     </div>
-                                                    <!-- End Col -->
-                                                </div>
+                                                </div> --}}
                                                 <!-- Datepicker -->
-                                                <div id="single-pre-set-ranges-tab-preview-datepicker"
+                                                {{-- <div id="single-pre-set-ranges-tab-preview-datepicker"
                                                     class="w-80 flex flex-col bg-white border shadow-lg rounded-xl overflow-hidden">
                                                     <div class="p-3">
                                                         <!-- Calendar -->
@@ -527,9 +540,9 @@
                                                     <!-- End Footer -->
                                                 </div>
                                                 <!-- End Datepicker -->
+ --}}
 
-
-                                                <!-- Section -->
+                                                {{-- <!-- Section -->
                                                 <div
                                                     class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <div class="sm:col-span-12">
@@ -574,10 +587,10 @@
                                                     </div>
                                                     <!-- End Col -->
                                                 </div>
-                                                <!-- End Section -->
+                                                <!-- End Section --> --}}
 
                                                 <!-- Section -->
-                                                <div
+                                                {{-- <div
                                                     class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <div class="sm:col-span-12">
                                                         <h2 class="text-lg font-semibold text-gray-800">
@@ -671,11 +684,11 @@
                                                             Add URL
                                                         </a>
                                                     </div>
-                                                </div>
+                                                </div> --}}
                                                 <!-- End Section -->
 
                                                 <!-- Section -->
-                                                <div
+                                                {{-- <div
                                                     class="grid sm:grid-cols-12 gap-2 sm:gap-4 py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <div class="sm:col-span-12">
                                                         <h2 class="text-lg font-semibold text-gray-800">
@@ -693,8 +706,7 @@
                                                     <!-- End Col -->
 
                                                     <div class="sm:col-span-9">
-                                                        <input id="af-submit-application-desired-salary"
-                                                            type="text"
+                                                        <input id="af-submit-application-desired-salary" type="text"
                                                             class="py-2 px-3 pe-11 block w-full border-gray-300 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                                     </div>
                                                     <!-- End Col -->
@@ -713,11 +725,11 @@
                                                             class="py-2 px-3 pe-11 block w-full border-gray-300 shadow-sm text-sm rounded-lg focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none">
                                                     </div>
                                                     <!-- End Col -->
-                                                </div>
+                                                </div> --}}
                                                 <!-- End Section -->
 
                                                 <!-- Section -->
-                                                <div
+                                                {{-- <div
                                                     class="py-8 first:pt-0 last:pb-0 border-t first:border-transparent border-gray-300">
                                                     <h2 class="text-lg font-semibold text-gray-800">
                                                         Submit application
@@ -741,7 +753,7 @@
                                                             us
                                                             to process your personal information.</label>
                                                     </div>
-                                                </div>
+                                                </div> --}}
                                                 <!-- End Section -->
 
                                                 <button type="button"
