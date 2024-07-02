@@ -43,8 +43,7 @@
                     <div class="flex justify-between mb-4 gap-4">
                         <p
                             class="ml-4 h-fit py-1 px-4 inline-flex items-center gap-x-1 text-sm font-medium bg-gray-100 text-teal-800 rounded-full">
-                            プロジェクトID：
-                            {{ $post->unique_id }}
+                            プロジェクトID：{{ $post->unique_id }}
                         </p>
                         <div class="flex gap-4">
                             @if (!$post->status)

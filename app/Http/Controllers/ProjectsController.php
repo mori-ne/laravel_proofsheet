@@ -13,7 +13,7 @@ class ProjectsController extends Controller
     // 一覧表示
     public function index()
     {
-        $posts = Projects::all();
+        $posts = Projects::orderBy('id', 'desc')->get();
         return view('dashboard')->with('posts', $posts);
     }
 
