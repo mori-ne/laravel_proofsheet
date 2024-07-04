@@ -29,7 +29,7 @@
                                                 <h2 class="text-xl font-semibold text-gray-800 mb-6">プロジェクト名</h2>
                                                 <input name="project_name" id="af-submit-application-full-name"
                                                     type="text"
-                                                    class="peer py-3 px-4 ps-11 block w-full bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
+                                                    class="peer py-3 px-4 block w-full bg-gray-100 border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
                                                     placeholder="This is a input placeholder"
                                                     value="{{ $data->project_name }}">
                                         </div>
