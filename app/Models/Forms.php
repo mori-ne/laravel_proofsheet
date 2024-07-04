@@ -19,6 +19,6 @@ class Forms extends Model
 
     public function project()
     {
-        return $this->belongsTo(Projects::class);
+        return $this->belongsTo(Projects::class, 'project_id');
     }
 }

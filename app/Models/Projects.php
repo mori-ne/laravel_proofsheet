@@ -24,7 +24,7 @@ class Projects extends Model
     // リレーション
     public function form()
     {
-        return $this->hasMany(Forms::class, 'project_id');
+        return $this->hasMany(Forms::class);
     }
 
     // uuid
