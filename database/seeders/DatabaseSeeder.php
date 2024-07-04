@@ -19,5 +19,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'rootuser',
             'email' => 'rootuser@rootuser.jp',
         ]);
+
+        $this->call([
+            FormSeeder::class,
+            ProjectSeeder::class,
+        ]);
     }
 }
