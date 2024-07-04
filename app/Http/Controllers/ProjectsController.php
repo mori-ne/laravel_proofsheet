@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreProjectRequest;
 use Illuminate\Support\Str;
+use SebastianBergmann\CodeCoverage\Report\Xml\Project;
 
 class ProjectsController extends Controller
 {
@@ -49,15 +50,46 @@ class ProjectsController extends Controller
     }
 
     // 編集ページ
-    public function edit(Projects $projects)
+    public function edit($id)
     {
-        //
+        $data = Projects::find($id);
+        // データが存在するかを確認
+        if (!$data) {
+            return redirect()->back()->withErrors(['error' => 'Data not found.']);
+        }
+
+        // データをビューに渡す
+        return view('dashboard.edit', compact('data'));
     }
 
     // 更新処理
-    public function update(Request $request, Projects $projects)
+    public function update(Request $request, $id)
     {
-        //
+        // バリデーション済みのデータを取得
+        $request->validate([
+            'project_name' => 'required|string|max:100',
+            'description' => 'nullable|string',
+            // 他のバリデーションルールをここに追加
+        ]);
+
+        $data = Projects::find($id);
+
+        if (!$data) {
+            return redirect()->back()->withErrors(['error' => 'Data not found.']);
+        }
+
+        // データを更新
+        $data->project_name = $request->input('project_name');
+        $data->description = $request->input('description');
+        $data->published_at = $request->input('published_at');
+        $data->unpublished_at = $request->input('unpublished_at');
+        // 他のフィールドについても同様に設定
+
+        // データを保存
+        $data->save();
+
+        // 成功した場合のリダイレクトやメッセージ表示などを行う
+        return redirect()->route('dashboard.index')->with('success', 'Data updated successfully!');
     }
 
     // 削除処理
