@@ -56,5 +56,5 @@ OK
 
 migrationとseedingを一緒に実行する方法
 ~~~
-php artisan migrate:refresh --seeder
+php artisan migrate:refresh --seed
 ~~~
