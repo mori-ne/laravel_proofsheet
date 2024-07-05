@@ -34,7 +34,9 @@
             -webkit-text-size-adjust: 100%;
             -moz-tab-size: 4;
             tab-size: 4;
-            font-family: Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+            font-family: "Noto Sans JP", "Figtree", sans-serif;
+
+            /* font-family: Figtree, ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji; */
             font-feature-settings: normal;
             font-variation-settings: normal;
             -webkit-tap-highlight-color: transparent
@@ -80,8 +82,9 @@
         kbd,
         pre,
         samp {
-            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-            font-feature-settings: normal;
+            font-family:
+                /* font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
+                font-feature-settings: normal;
             font-variation-settings: normal;
             font-size: 1em
         }
