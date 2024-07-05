@@ -40,7 +40,7 @@
 
             <div class=" overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-7 text-gray-900 mb-6 bg-white rounded border shadow">
-                    <div class="flex justify-between mb-4 gap-4">
+                    <div class="flex justify-between mb-3 gap-3">
                         <p
                             class="ml-4 h-fit py-1 px-4 inline-flex items-center gap-x-1 text-sm font-medium bg-gray-100 text-teal-800 rounded-full">
                             プロジェクトID：{{ $post->unique_id }}
@@ -106,7 +106,7 @@
 
                             <div class="md:row-span-2">
                                 <div class="w-full">
-                                    <h2 class="text-3xl font-bold md:text-3xl md:leading-tight">
+                                    <h2 class="text-2xl font-bold md:text-2xl md:leading-tight">
                                         {{ $post->project_name }}
                                     </h2>
                                     <p class="mt-1 mb-4 hidden md:block text-gray-600">

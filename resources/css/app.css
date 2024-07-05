@@ -3,5 +3,5 @@
 @tailwind components;
 @tailwind utilities;
 body {
-  font-family: "Noto Sans JP", "Figtree", sans-serif;
+  font-family: "Figtree", "Noto Sans JP", sans-serif !important;
 }/*# sourceMappingURL=app.css.map */
