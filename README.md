@@ -51,3 +51,10 @@ MAMP or XAMPPの場合
 	~~~
 
 OK
+
+---
+
+migrationとseedingを一緒に実行する方法
+~~~
+php artisan migrate:refresh --seeder
+~~~
