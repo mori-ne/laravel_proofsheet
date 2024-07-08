@@ -11,17 +11,17 @@ class FormUserController extends Controller
 
     public function index()
     {
-        return view('formuser.index');
+        abort(404, 'Page not found');
     }
 
 
-    public function show($formuser)
+    public function login($formuser)
     {
         $user = Projects::where('unique_id', $formuser)->first();
 
         // 公開・非公開フラグ
-        $project = Projects::where('unique_id', $formuser)->first();
-        if ($project && $project->status == 0) {
+        // $project = Projects::where('unique_id', $formuser)->first();
+        if ($user && $user->status == 0) {
             abort(404, 'Page not found');
         }
 
@@ -31,6 +31,9 @@ class FormUserController extends Controller
         }
 
         // ビューにデータを渡す
-        return view('formuser.show', compact('user'));
+        return view('formuser.login', compact('user'));
     }
+
+    // public function  show(){
+
 }

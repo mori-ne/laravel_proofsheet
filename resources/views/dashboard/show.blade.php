@@ -45,7 +45,7 @@
                             class="ml-4 h-fit py-1 px-4 inline-flex items-center gap-x-1 text-sm font-medium bg-gray-100 text-teal-800 rounded-full">
                             プロジェクトID：
                             <a
-                                href="{{ route('formuser.show', ['formuser' => $post->unique_id]) }}">{{ $post->unique_id }}</a>
+                                href="{{ route('formuser.login', ['formuser' => $post->unique_id]) }}">{{ $post->unique_id }}</a>
 
                         </p>
                         <div class="flex gap-4">

@@ -29,6 +29,7 @@ Route::get('formlist', [FormListController::class, 'index'])->name('formlist.ind
 
 // formuser
 Route::get('/formuser', [FormUserController::class, 'index'])->name('formuser.index');
-Route::get('/formuser/{formuser}', [FormUserController::class, 'show'])->name('formuser.show');
+Route::get('/formuser/{formuser}', [FormUserController::class, 'login'])->name('formuser.login');
+Route::get('/formuser/{formuser}/show', [FormUserController::class, 'show'])->name('formuser.show');
 
 require __DIR__ . '/auth.php';
