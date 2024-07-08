@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProjectsController;
 use App\Http\Controllers\ProfileController;
 use App\http\Controllers\FormListController;
+use App\Http\Controllers\FormUser\FormUserController;
 use Illuminate\Support\Facades\Route;
 
 // index
@@ -25,5 +26,9 @@ Route::middleware('auth')->group(function () {
 
 // forms
 Route::get('formlist', [FormListController::class, 'index'])->name('formlist.index');
+
+// formuser
+Route::get('/formuser', [FormUserController::class, 'index'])->name('formuser.index');
+Route::get('/formuser/{formuser}', [FormUserController::class, 'show'])->name('formuser.show');
 
 require __DIR__ . '/auth.php';
